@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;1,400;1,700&display=swap");
+
+body {
+  background-color:rgb(242, 245, 215);
+}
+.navbar {
+  background-color: rgba(173, 143, 19, 0.8); 
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(8px); 
+  box-shadow: 0 0 10px rgba(173, 143, 19, 0.3);
+}
+
+.navbar-toggler {
+  border: none;
+  color:rgb(250, 252, 238);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-ani {
+  position: relative;
+  color: #fff !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+.nav-ani::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #eec41c;
+  transition: 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-ani:hover {
+  color: #eec41c !important;
+}
+
+.nav-ani:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80")
+    no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+.display-5 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 4rem;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.restaurant-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(238, 9, 121, 0.4);
+}
+@media (max-width: 576px) {
+  .restaurant-card {
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .restaurant-card img.card-img-top {
+    height: 140px;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.25rem 0.25rem 0 0;
+  
+}
+@media (max-width: 767px) {
+  .modal-dialog {
+    max-width: 90% !important;
+    margin: 1.5rem auto;
+  }
+
+  .modal-body .card {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.btn {
+  background-color: #c4a010;
+  border: none;
+}
+.btn:hover {
+  background-color: #eec41c;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+}
+.me-2 {
+  height: 50px;
+  width: 80px;
+}
+.preloader {
+  animation: hideLoader 1s forwards 0.5s;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+@keyframes hideLoader {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.fw-bold {
+  color: #ad8f13;
+}
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+.text {
+  color: rgb(255, 255, 254);
+  font-family: 'Great Vibes', cursive;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+body, p, a, li {
+  font-family: 'Poppins', sans-serif;
+}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none; /* اول مخفی */
+  z-index: 100;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  padding: 0;
+  line-height: 1;
+}
+
+#scrollTopBtn.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+html {
+  scroll-behavior: smooth;
+}
+footer {
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(78, 78, 78));
+}
+.achievement-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ستاره‌ها */
+.achievement-icon-wrapper::before,
+.achievement-icon-wrapper::after,
+.achievement-icon-wrapper .star1,
+.achievement-icon-wrapper .star2,
+.achievement-icon-wrapper .star3,
+.achievement-icon-wrapper .star4,
+.achievement-icon-wrapper .star5,
+.achievement-icon-wrapper .star6 {
+  content: "★";
+  position: absolute;
+  color: gold;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+}
+
+/* موقعیت ستاره‌ها با تاخیرهای متفاوت */
+.achievement-icon-wrapper::before {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg) translate(10px) rotate(0deg);
+  animation-delay: 0s;
+}
+
+.achievement-icon-wrapper::after {
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg) translate(10px) rotate(-180deg);
+  animation-delay: 3s;
+}
+
+.achievement-icon-wrapper .star1 {
+  top: 10%;
+  right: -12px;
+  animation-delay: 1s;
+  transform: rotate(60deg) translate(10px) rotate(-60deg);
+}
+
+.achievement-icon-wrapper .star2 {
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%) rotate(90deg) translate(10px) rotate(-90deg);
+  animation-delay: 2s;
+}
+
+.achievement-icon-wrapper .star3 {
+  bottom: 15%;
+  right: -12px;
+  animation-delay: 4s;
+  transform: rotate(120deg) translate(10px) rotate(-120deg);
+}
+
+.achievement-icon-wrapper .star4 {
+  bottom: 10%;
+  left: -12px;
+  animation-delay: 5s;
+  transform: rotate(240deg) translate(10px) rotate(-240deg);
+}
+
+.achievement-icon-wrapper .star5 {
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%) rotate(270deg) translate(10px) rotate(-270deg);
+  animation-delay: 3s;
+}
+
+.achievement-icon-wrapper .star6 {
+  top: 15%;
+  left: -12px;
+  animation-delay: 1.5s;
+  transform: rotate(300deg) translate(10px) rotate(-300deg);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) translate(10px) rotate(0deg); }
+  100% { transform: rotate(360deg) translate(10px) rotate(-360deg); }
+}
